@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Market Index Page" do
-  before each: do
+  before :each do
     @markets = MarketFacade.new.get_markets
   end
   describe "as a visitor" do
