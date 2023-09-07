@@ -9,6 +9,12 @@ class MarketFacade
     Market.new(one_market_data(id))
   end
 
+  def get_market_vendors(id)
+    market_vendors_data(id).map do |vendor|
+      Vendor.new(vendor)
+    end
+  end
+
   private
 
   def service 
@@ -21,5 +27,9 @@ class MarketFacade
 
   def one_market_data(id)
     @_one_market_data ||= service.get_one_market(id)[:data]
+  end
+
+  def market_vendors_data(id)
+    @_market_vendors_data ||= service.find_market_vendors(id)[:data]
   end
 end

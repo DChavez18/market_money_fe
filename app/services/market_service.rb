@@ -7,6 +7,11 @@ class MarketService
     get_url("api/v0/markets/#{id}")
   end
 
+  def find_market_vendors(id)
+    get_url("/api/markets/#{id}/vendors")
+    # not getting back response
+  end
+
   def get_url(url)
     response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)
