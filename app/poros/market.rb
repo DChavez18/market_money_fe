@@ -5,6 +5,7 @@ class Market
               :city,
               :county,
               :state,
+              :zip,
               :lat,
               :lon,
               :vendor_count
@@ -16,6 +17,7 @@ class Market
     @city = data[:attributes][:city]
     @county = data[:attributes][:county]
     @state = data[:attributes][:state]
+    @zip = data[:attributes][:zip]
     @lat = data[:attributes][:lat]
     @lon = data[:attributes][:lon]
     @vendor_count = data[:attributes][:vendor_count]

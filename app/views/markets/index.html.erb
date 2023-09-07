@@ -15,7 +15,7 @@
       <td><%= market.city %></td>
       <td><%= market.state %></td>
       <td>
-        <%= link_to "More Info", market_path(market), class: "more-info-button" %>
+        <%= link_to "More Info", market_path(market.id), class: "more-info-button" %>
       </td>
     </tr>
   <% end %>
