@@ -18,7 +18,7 @@ RSpec.describe "Market's Show page" do
     it "displays a list of all the vendors that belong to that market and each vendor's name is a link to that vendors show page" do
       @vendors = MarketFacade.new.get_market_vendors(322458)
       visit "/markets/322458"
-      save_and_open_page
+      
       expect(page).to have_content("Vendors at our Market")
       expect(page).to have_link(@vendors.first.name)
     end
