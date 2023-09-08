@@ -3,3 +3,12 @@
 <p><strong>City:</strong> <%= @market.city %></p>
 <p><strong>State:</strong> <%= @market.state %></p>
 <p><strong>ZIP:</strong> <%= @market.zip %></p>
+
+<h2> Vendors at our Market </h2>
+<ul>
+  <% @vendors.each do |vendor| %>
+    <li>
+    <%=link_to "#{vendor.name}", "/vendors/#{vendor.id}" %>
+    </li>
+  <% end %>
+</ul>

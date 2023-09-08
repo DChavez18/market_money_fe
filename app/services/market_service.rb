@@ -8,8 +8,7 @@ class MarketService
   end
 
   def find_market_vendors(id)
-    get_url("/api/markets/#{id}/vendors")
-    # not getting back response
+    get_url("/api/v0/markets/#{id}/vendors")
   end
 
   def get_url(url)
