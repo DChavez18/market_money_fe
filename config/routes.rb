@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   resources :markets, only: [:index, :show] do
     resources :vendors, only: [:show]
   end
-   
+  get "/vendors/:id", to: "vendors#show"
 end
