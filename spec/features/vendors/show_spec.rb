@@ -7,7 +7,7 @@ RSpec.describe "Vendor Show Page" do
     end
     it "displays the vendors name, contact info, whether they accept credit and a description of what they sell" do
       visit "/vendors/55823"
-save_and_open_page
+      
       expect(page).to have_content(@vendor.name)
       expect(page).to have_content(@vendor.contact_name)
       expect(page).to have_content(@vendor.contact_phone)
